@@ -1,0 +1,68 @@
+.page-header {
+  position: absolute;
+  width: 100%;
+  font-family: "AlumniSans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  display: flex;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 20px;
+
+  @include vp-1199 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+  }
+}
+
+.page-header__link {
+  margin-right: auto;
+  display: flex;
+
+  svg {
+    @include vp-1199 {
+      width: 82px;
+      height: 17px;
+    }
+
+    @include vp-767 {
+      width: 69px;
+      height: 24px;
+    }
+  }
+}
+
+.page-header__phone {
+  color: #ffffff;
+
+  @include vp-1199 {
+    line-height: 17px;
+  }
+}

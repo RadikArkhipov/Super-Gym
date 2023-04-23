@@ -4,7 +4,7 @@
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 
@@ -21,6 +21,11 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    background-color: #ffffff;
+    color: #102654;
+
+    &:focus {
+      outline: 2px solid #ffffff;
+    }
   }
 }
