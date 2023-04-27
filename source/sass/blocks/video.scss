@@ -1,0 +1,102 @@
+.video {
+  position: absolute;
+  width: 364px;
+  min-height: 228px;
+  aspect-ratio: 364/228;
+  top: 69%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  picture {
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(20, 54, 122, 0.5);
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+
+    @include hover-focus {
+      &::after {
+        display: none;
+      }
+
+      &:focus {
+        outline: 2px solid #ffffff;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include vp-1199 {
+    width: 34.63%;
+    min-height: 167px;
+    aspect-ratio: 266/167;
+    top: 78.5%;
+    left: 50%;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 320/167;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+}
+
+.video__button {
+  background-image: url("../img/svg/icon-video-play.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: absolute;
+  border: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 50%;
+
+  @include hover-focus {
+    & + picture::after {
+      display: none;
+    }
+
+    &:focus {
+      outline: 2px solid #ffffff;
+    }
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+}
+
+.video__play {
+  min-width: 100%;
+  width: auto;
+  min-height: 100%;
+  height: auto;
+  aspect-ratio: 364/228;
+
+  @include vp-1199 {
+    aspect-ratio: 266/167;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320/167;
+  }
+}

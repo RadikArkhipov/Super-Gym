@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {initTabs} from './utils/init-tabs';
 
 // ---------------------------------
 
@@ -21,6 +22,27 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initTabs();
+
+    const wrapperVideo = document.querySelector('[data-video]');
+    const picture = wrapperVideo.querySelector('picture');
+    const buttonVideo = document.querySelector('[data-video-button]');
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw');
+    iframe.setAttribute('title', 'YouTube video player');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+
+    iframe.classList.add('video__play');
+
+    wrapperVideo.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      wrapperVideo.append(iframe);
+      picture.remove();
+      buttonVideo.remove();
+    });
   });
 });
 

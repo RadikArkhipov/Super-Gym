@@ -1,0 +1,107 @@
+.gym {
+  display: flex;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 235px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding-top: 101px;
+    padding-bottom: 182px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 70px;
+  }
+}
+
+.gym__description {
+  width: 30.6%;
+  margin-right: auto;
+  margin-left: 60px;
+
+  @include vp-1199 {
+    width: 100%;
+    margin: 0 0 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 88px;
+    padding-right: 88px;
+
+    @include vp-767 {
+      padding: 0 15px;
+      align-items: flex-start;
+      margin-bottom: 23px;
+    }
+  }
+
+  h2 {
+    font-family: "AlumniSans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.03em;
+    margin: 39px 0 7px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 16px 0 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 5px;
+    }
+  }
+
+  span {
+    display: block;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 39px;
+
+    @include vp-1199 {
+      margin-bottom: 33px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    margin: 0 0 8px;
+
+    @include vp-1199 {
+      text-align: center;
+      margin: 0 0 10px;
+
+      @include vp-767 {
+        text-align: start;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+  }
+}
+
+.gym__img-wrapper {
+  @include vp-767 {
+    margin-bottom: 40px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

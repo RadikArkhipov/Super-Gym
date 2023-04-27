@@ -1,0 +1,84 @@
+.tickets {
+  background-color: #f8f9fc;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/tickets-img.webp");
+    background-repeat: no-repeat;
+    width: 288px;
+    height: 415px;
+    bottom: -71px;
+    right: 0;
+
+    @include vp-1199 {
+      background-image: url("../img/tickets-img-tablet.webp");
+      width: 348px;
+      height: 375px;
+      bottom: -57px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.tickets__container {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  @include vp-1199 {
+    padding-top: 102px;
+    padding-bottom: 59px;
+
+    // @media (min-width: 470px) {
+    //   padding-left: 60px;
+    //   padding-right: 60px;
+    // }
+
+    // @media (min-width: 560px) {
+    //   padding-left: 90px;
+    //   padding-right: 90px;
+    // }
+
+    // @media (min-width: 620px) {
+    //   padding-left: 105px;
+    //   padding-right: 105px;
+    // }
+
+    // @media (min-width: 720px) {
+    //   padding-left: 134px;
+    //   padding-right: 134px;
+    // }
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-bottom: 35px;
+  }
+
+  h2 {
+    font-family: "AlumniSans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    margin: 0 0 17px;
+    text-align: center;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 15px 20px 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-right: 11px;
+      margin-bottom: 22px;
+    }
+  }
+}

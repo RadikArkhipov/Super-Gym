@@ -1,0 +1,48 @@
+.coaches {
+  color: #ffffff;
+
+  h2 {
+    font-family: "AlumniSans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    color: #102654;
+    margin: 0 0 48px;
+  }
+}
+
+.coaches__slider-container {
+  position: relative;
+}
+
+.coaches__slider-btn {
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+
+  &--prev {
+    top: 130px;
+    left: -57px;
+  }
+
+  &--next {
+    top: 130px;
+    right: -57px;
+  }
+}
+
+.coaches__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.coaches__item {
+  width: 260px;
+  margin-right: 40px;
+  position: relative;
+}
+
