@@ -43,6 +43,25 @@ window.addEventListener('DOMContentLoaded', () => {
       picture.remove();
       buttonVideo.remove();
     });
+
+    const coachesSliderContainer = document.querySelector('.coaches__slider-container');
+
+    if (coachesSliderContainer) {
+      const nextButton = coachesSliderContainer.querySelector('.coaches__slider-btn--next');
+      const prevButton = coachesSliderContainer.querySelector('.coaches__slider-btn--prev');
+
+      const slider = new Swiper(coachesSliderContainer, {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        direction: 'horizontal',
+        // loop: true,
+
+        navigation: {
+          nextEl: nextButton,
+          prevEl: prevButton,
+        },
+      });
+    }
   });
 });
 

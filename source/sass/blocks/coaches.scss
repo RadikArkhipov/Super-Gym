@@ -1,5 +1,6 @@
 .coaches {
   color: #ffffff;
+  padding-bottom: 140px;
 
   h2 {
     font-family: "AlumniSans", "Arial", sans-serif;
@@ -14,6 +15,7 @@
 
 .coaches__slider-container {
   position: relative;
+  overflow: hidden;
 }
 
 .coaches__slider-btn {
