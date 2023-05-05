@@ -1,0 +1,43 @@
+.socials-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: -3px 0 0 0;
+  padding: 0;
+  max-width: 97px;
+
+  @include vp-1199 {
+    margin-top: 3px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.socials-list__item {
+  a {
+    display: flex;
+    border-radius: 50%;
+
+    @include hover-focus {
+      svg {
+        @media (min-width: 1200px) {
+          fill: #ed0233;
+
+          &:focus {
+            outline: 2px solid #ffffff;
+          }
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        fill: #ed0233;
+      }
+    }
+  }
+}

@@ -151,6 +151,7 @@
   letter-spacing: 0.05em;
   padding: 24px 59px;
   margin-left: 143px;
+  user-select: none;
 
   @include vp-1199 {
     padding: 23px 34px;

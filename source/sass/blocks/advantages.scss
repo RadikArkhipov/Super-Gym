@@ -7,8 +7,15 @@
   padding-bottom: 136px;
 
   @include vp-1199 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 92px;
+    padding-bottom: 94px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 28px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   h2 {
@@ -23,7 +30,13 @@
     @include vp-1199 {
       font-size: 42px;
       line-height: 50px;
-      margin: 0 0 41px 0;
+      margin: 0 23px 42px 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 18px 46px 0;
     }
   }
 }
@@ -43,6 +56,12 @@
     max-width: 100%;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 1fr min-content 1fr;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &::before {
@@ -97,13 +116,31 @@
     margin-top: 153px;
 
     @include vp-1199 {
-      margin-top: 41px;
+      margin-top: 43px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
     }
   }
 
-  // @include vp-1199 {
-  //   &
-  // }
+  @include vp-1199 {
+    &:nth-child(3n+2) {
+      margin-left: 14px;
+
+      @include vp-767 {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 46px;
+    padding-left: 46px;
+    margin-bottom: 38px;
+  }
 
   &--center {
     max-width: 240px;
@@ -118,11 +155,18 @@
     max-height: 307px;
 
     @include vp-1199 {
-      min-width: 442px;
+      max-width: unset;
       grid-column: 1/3;
       grid-row: 2/3;
       margin: 0 auto;
-      max-height: 239px;
+      padding: 32px 130px 35px 128px;
+      min-height: 239px;
+      width: 65.19%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 48px 72px 47px;
     }
 
     b {
@@ -130,6 +174,14 @@
       font-size: 74px;
       line-height: 81px;
       margin: 0;
+
+      @include vp-1199 {
+        line-height: 75px;
+      }
+
+      @include vp-767 {
+        line-height: 65px;
+      }
     }
 
     span {
@@ -141,6 +193,11 @@
       @include vp-1199 {
         font-size: 22px;
         line-height: 33px;
+        margin-bottom: 13px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 9px;
       }
     }
 
@@ -154,6 +211,14 @@
 .advantages__item-info {
   margin-right: 30px;
 
+  @include vp-767 {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
   p {
     margin: 0;
     font-weight: 700;
@@ -165,6 +230,7 @@
 
     @include vp-1199 {
       font-size: 58px;
+      line-height: 52px;
     }
   }
 
@@ -176,6 +242,12 @@
 }
 
 .advantages__item-text {
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h3 {
     font-weight: 700;
     font-size: 22px;
@@ -185,6 +257,11 @@
     @include vp-1199 {
       font-size: 20px;
       line-height: 30px;
+      margin-bottom: 1px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 2px;
     }
   }
 
@@ -192,19 +269,9 @@
     font-weight: 300;
     line-height: 22px;
     margin: 0;
+
+    @include vp-767 {
+      text-align: center;
+    }
   }
 }
-
-// .advantages__center {
-//   background-color: #1c3374;
-//   color: #ffffff;
-//   display: flex;
-//   flex-direction: column;
-
-//   &:last-child {
-//     font-weight: 700;
-//     font-size: 74px;
-//     line-height: 111px;
-//     margin: 0;
-//   }
-// }

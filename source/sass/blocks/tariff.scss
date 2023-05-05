@@ -32,6 +32,12 @@
   padding: 56px 25px 60px;
   border: 7px solid transparent;
   z-index: 10;
+  max-height: 448px;
+  overflow: auto;
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
 
   @include vp-1199 {
     width: 442px;
@@ -41,13 +47,10 @@
   @include vp-767 {
     width: 100%;
     min-height: 384px;
+    max-height: 384px;
     padding: 44px 33px 47px;
     margin-bottom: 35px;
     aspect-ratio: 290/384;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 
   &:focus-within {
@@ -148,6 +151,7 @@
   color: #102654;
   padding: 26px 46px;
   text-align: center;
+  user-select: none;
 
   @include vp-767 {
     width: 100%;

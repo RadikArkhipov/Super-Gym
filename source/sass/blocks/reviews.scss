@@ -1,0 +1,144 @@
+.reviews {
+  padding-top: 17px;
+  padding-bottom: 82px;
+
+  @include vp-1199 {
+    padding-bottom: 60px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-family: "AlumniSans", "Arial", sans-serif;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0 0 0 7px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.reviews__container {
+  position: relative;
+  max-width: 640px;
+  padding: 37px 40px;
+
+  @include vp-1199 {
+    padding: 40px 38px;
+  }
+
+  @include vp-767 {
+    padding: 41px 47px;
+  }
+}
+
+.reviews__slider-container {
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.reviews__item {
+  padding: 62px 62px 57px;
+
+  @include vp-1199 {
+    padding: 62px 65px 57px;
+  }
+
+  @include vp-767 {
+    padding: 50px 25px 34px;
+  }
+}
+
+.reviews__slider-btn {
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+
+  svg {
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+
+  @include hover-focus {
+    svg {
+      stroke: #102654;
+      stroke-width: 2px;
+      transform: scale(120%);
+      transition: $trans-default;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &--prev {
+    left: -17px;
+
+    @include vp-1199 {
+      left: -20px;
+    }
+
+    @include vp-767 {
+      left: 15px;
+    }
+  }
+
+  &--next {
+    right: -17px;
+
+    @include vp-1199 {
+      right: -20px;
+    }
+
+    @include vp-767 {
+      right: 15px;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  svg {
+    opacity: 0.35;
+
+    @include hover-focus {
+      stroke: rgba(175, 175, 175);
+      stroke-width: 1px;
+      transform: none;
+      cursor: text;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

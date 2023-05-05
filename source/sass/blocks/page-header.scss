@@ -28,7 +28,8 @@
   flex-wrap: wrap;
   padding-top: 30px;
   padding-bottom: 30px;
-  gap: 20px;
+  column-gap: 20px;
+  justify-content: flex-end;
 
   @include vp-1199 {
     padding-top: 40px;
@@ -42,9 +43,29 @@
   }
 }
 
-.page-header__link {
+.page-header__logo {
   margin-right: auto;
   display: flex;
+  cursor: pointer;
+  user-select: none;
+
+  @include hover-focus {
+    svg {
+      @media (min-width: 1200px) {
+        fill: #ed0233;
+
+        &:focus {
+          outline: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      fill: #ed0233;
+    }
+  }
 
   svg {
     @include vp-1199 {
@@ -61,6 +82,21 @@
 
 .page-header__phone {
   color: #ffffff;
+  user-select: none;
+
+  @include hover-focus {
+    @media (min-width: 1200px) {
+      color: #ed0233;
+    }
+
+    &:focus {
+      outline: 2px solid #ffffff;
+    }
+  }
+
+  &:active {
+    color: #ed0233;
+  }
 
   @include vp-1199 {
     line-height: 17px;

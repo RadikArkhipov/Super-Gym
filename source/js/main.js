@@ -45,16 +45,47 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     const coachesSliderContainer = document.querySelector('.coaches__slider-container');
+    const coachesSliderWrapper = document.querySelector('.coaches__slider-wrapper');
 
     if (coachesSliderContainer) {
-      const nextButton = coachesSliderContainer.querySelector('.coaches__slider-btn--next');
-      const prevButton = coachesSliderContainer.querySelector('.coaches__slider-btn--prev');
+      const nextButton = coachesSliderWrapper.querySelector('.coaches__slider-btn--next');
+      const prevButton = coachesSliderWrapper.querySelector('.coaches__slider-btn--prev');
 
       const slider = new Swiper(coachesSliderContainer, {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 0,
         direction: 'horizontal',
-        // loop: true,
+        loop: true,
+
+        navigation: {
+          nextEl: nextButton,
+          prevEl: prevButton,
+        },
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        },
+      });
+    }
+
+    const reviewsSliderContainer = document.querySelector('.reviews__slider-container');
+
+    if (reviewsSliderContainer) {
+      const nextButton = reviewsSliderContainer.querySelector('.reviews__slider-btn--next');
+      const prevButton = reviewsSliderContainer.querySelector('.reviews__slider-btn--prev');
+
+      const slider = new Swiper(reviewsSliderContainer, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        direction: 'horizontal',
 
         navigation: {
           nextEl: nextButton,
