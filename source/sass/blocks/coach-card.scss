@@ -9,6 +9,21 @@
     aspect-ratio: 226/274;
   }
 
+  &:focus-within {
+    .coach-card__description {
+      flex-direction: column;
+      background-color: rgba(16, 38, 84, 0.89);
+    }
+
+    p {
+      display: block;
+    }
+
+    .coach-card__info {
+      display: block;
+    }
+  }
+
   &:hover {
     .coach-card__description {
       flex-direction: column;

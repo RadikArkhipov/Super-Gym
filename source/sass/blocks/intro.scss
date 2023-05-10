@@ -87,6 +87,7 @@
 
 .intro__text {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 48px;
 
   @include vp-1199 {

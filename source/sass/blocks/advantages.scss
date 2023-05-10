@@ -13,7 +13,7 @@
 
   @include vp-767 {
     padding-top: 63px;
-    padding-bottom: 28px;
+    padding-bottom: 65px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -42,20 +42,18 @@
 }
 
 .advantages__list {
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-  width: 100%;
-  max-width: 1040px;
-  min-height: 314px;
   display: grid;
-  grid-template-columns: 1fr 23.08% 1fr;
-  position: relative;
+  grid-template-columns: auto minmax(240px, 1fr) auto;
+  column-gap: 5%;
+  padding: 0;
+  max-width: 1040px;
+  margin: 0 auto;
 
   @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 27px;
+    row-gap: 43px;
     max-width: 100%;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 1fr min-content 1fr;
   }
 
   @include vp-767 {
@@ -63,83 +61,63 @@
     flex-direction: column;
     align-items: center;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
-    top: 154px;
-    left: 0;
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
-    top: 154px;
-    right: 0;
-
-    @include vp-1199 {
-      display: none;
-    }
-  }
 }
 
 .advantages__item {
-  display: flex;
-
-  &:nth-child(3n+1) {
-    margin-left: 20px;
-
-    @include vp-1199 {
-      margin-left: 0;
-    }
-  }
-
-  &:nth-child(3n+2) {
-    margin-left: 62px;
-
-    @include vp-1199 {
-      margin-left: 0;
-    }
-  }
-
-  &:nth-child(n+4) {
-    margin-top: 153px;
-
-    @include vp-1199 {
-      margin-top: 43px;
-    }
-
-    @include vp-767 {
-      margin-top: 0;
-    }
-  }
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10%;
 
   @include vp-1199 {
-    &:nth-child(3n+2) {
-      margin-left: 14px;
-
-      @include vp-767 {
-        margin-left: 0;
-      }
-    }
+    gap: 9%;
   }
 
   @include vp-767 {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding-right: 46px;
     padding-left: 46px;
-    margin-bottom: 38px;
+  }
+
+  &--area {
+    padding-bottom: 77px;
+    padding-left: 18px;
+
+    @include vp-1199 {
+      padding: 0;
+    }
+  }
+
+  &--parking {
+    padding-bottom: 77px;
+    padding-left: 6px;
+
+    @include vp-1199 {
+      padding: 0;
+    }
+  }
+
+  &--comfort {
+    border-top: 2px solid rgba(209, 10, 66, 0.2);
+    padding-top: 77px;
+    padding-left: 18px;
+
+    @include vp-1199 {
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  &--experience {
+    border-top: 2px solid rgba(209, 10, 66, 0.2);
+    padding-top: 77px;
+    padding-left: 6px;
+
+    @include vp-1199 {
+      border: 0;
+      padding: 0;
+    }
   }
 
   &--center {
@@ -154,29 +132,15 @@
     padding: 50px 25px 57px;
     max-height: 307px;
 
-    @include vp-1199 {
-      max-width: unset;
-      grid-column: 1/3;
-      grid-row: 2/3;
-      margin: 0 auto;
-      padding: 32px 130px 35px 128px;
-      min-height: 239px;
-      width: 65.19%;
-    }
-
-    @include vp-767 {
-      width: 100%;
-      padding: 48px 72px 47px;
-    }
-
     b {
       font-weight: 700;
       font-size: 74px;
       line-height: 81px;
-      margin: 0;
+      margin: 0 0 -19px;
 
       @include vp-1199 {
         line-height: 75px;
+        margin-bottom: 0;
       }
 
       @include vp-767 {
@@ -205,18 +169,31 @@
       margin: 0;
       text-align: center;
     }
+
+    @include vp-1199 {
+      max-width: unset;
+      grid-column: 1/3;
+      grid-row: 2/3;
+      margin: 0 auto;
+      padding: 32px 130px 35px 128px;
+      min-height: 239px;
+      width: 65.19%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 42px 72px;
+    }
   }
 }
 
 .advantages__item-info {
-  margin-right: 30px;
-
   @include vp-767 {
     margin-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   p {
@@ -242,6 +219,10 @@
 }
 
 .advantages__item-text {
+  :not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
   @include vp-767 {
     display: flex;
     flex-direction: column;
