@@ -2309,9 +2309,6 @@ button,
   list-style: none;
   font-size: 14px;
   line-height: 21px;
-}
-
-.intro__item:nth-child(odd) {
   text-align: right;
 }
 
@@ -2382,7 +2379,7 @@ button,
   width: 364px;
   min-height: 228px;
   aspect-ratio: 364/228;
-  top: 69%;
+  top: 522px;
   left: 53%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -2714,6 +2711,7 @@ button,
 .games__container picture img {
   -o-object-fit: cover;
   object-fit: cover;
+  height: 100%;
 }
 
 .games__preview {
@@ -3253,9 +3251,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 560px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 560px;
 }
 
 .unlimited picture {
@@ -3299,7 +3297,7 @@ button,
 .unlimited__text p {
   font-size: 18px;
   line-height: 25px;
-  margin: 0;
+  margin: 0 0 32px;
 }
 
 .unlimited__text a {
@@ -3335,8 +3333,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -3350,7 +3346,7 @@ button,
 .discounts p {
   font-size: 16px;
   line-height: 22px;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 .discounts a {
@@ -3387,6 +3383,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 33px 34px 37px;
+  height: 100%;
 }
 
 .discounts__friend::after {
@@ -3414,6 +3411,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 33px 34px 37px;
+  height: 100%;
 }
 
 .discounts__team::after {
@@ -3532,6 +3530,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
 }
 
 .review picture {
@@ -3697,21 +3696,18 @@ button,
   justify-content: space-between;
   position: relative;
   width: 400px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .contacts__left-right-wrapper::after {
   content: "";
   position: absolute;
-  width: 102px;
-  height: 1px;
   background-color: #74819c;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 57px;
-  bottom: 0;
-  left: 179px;
-  right: 0;
+  left: 230px;
+  top: 6px;
+  bottom: 24px;
+  width: 1px;
 }
 
 .contacts__left-right-wrapper h4 {
@@ -3729,12 +3725,8 @@ button,
   margin-bottom: 18px;
 }
 
-.contacts__left-wrapper {
-  margin-bottom: 19px;
-}
-
-.contacts__right-wrapper h4 {
-  margin-bottom: 1px;
+.contacts__shedule {
+  margin-bottom: 18px;
 }
 
 .contacts__right-wrapper a {
@@ -3750,6 +3742,24 @@ button,
 
 .contacts__phone {
   margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.contacts__email {
+  margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 /* @mixin hover-focus {
@@ -4139,11 +4149,22 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-left: 118px;
+    padding-right: 118px;
   }
 
   .tariff-list__item {
-    width: 442px;
+    width: 100%;
+    padding: 56px 109px 60px;
+    aspect-ratio: 442/448;
     margin-right: 0;
+  }
+
+  .tariff-list__btn {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .games__container {
@@ -4419,6 +4440,8 @@ button,
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .discounts__friend {
@@ -4518,9 +4541,9 @@ button,
   }
 
   .contacts__left-right-wrapper::after {
-    width: 129px;
-    left: 202px;
-    top: 73px;
+    top: 8px;
+    bottom: 27px;
+    left: 266px;
   }
 
   .contacts__left-right-wrapper h4 {
@@ -4613,7 +4636,7 @@ button,
   }
 
   .intro__info {
-    width: 290px;
+    width: 100%;
     margin: 0;
   }
 
@@ -4640,8 +4663,11 @@ button,
 
   .intro__btn {
     margin: 0;
-    max-width: 290px;
     padding: 24px 86px 24px 87px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .gym {
@@ -4707,8 +4733,12 @@ button,
     margin-right: 45px;
   }
 
+  .tariff-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .tariff-list__item {
-    width: 100%;
     min-height: 384px;
     max-height: 384px;
     padding: 44px 33px 47px;
@@ -4741,13 +4771,6 @@ button,
   .tariff-list__price svg {
     width: 24px;
     height: 33px;
-  }
-
-  .tariff-list__btn {
-    width: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 
   .games__container {
@@ -5147,7 +5170,7 @@ button,
 
   .contacts {
     min-height: 507px;
-    padding: 64px 15px 61px 15px;
+    padding: 64px 15px 46px 15px;
   }
 
   .contacts::before {
