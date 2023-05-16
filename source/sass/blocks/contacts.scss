@@ -12,7 +12,7 @@
 
   @include vp-767 {
     min-height: 507px;
-    padding: 64px 15px 61px 15px;
+    padding: 64px 15px 46px 15px;
   }
 
   &::before {
@@ -84,6 +84,7 @@
   justify-content: space-between;
   position: relative;
   width: 400px;
+  flex-wrap: wrap;
 
   @include vp-1199 {
     margin-left: 0;
@@ -98,19 +99,16 @@
   &::after {
     content: "";
     position: absolute;
-    width: 102px;
-    height: 1px;
     background-color: #74819c;
-    transform: rotate(90deg);
-    top: 57px;
-    bottom: 0;
-    left: 179px;
-    right: 0;
+    left: 230px;
+    top: 6px;
+    bottom: 24px;
+    width: 1px;
 
     @include vp-1199 {
-      width: 129px;
-      left: 202px;
-      top: 73px;
+      top: 8px;
+      bottom: 27px;
+      left: 266px;
     }
 
     @include vp-767 {
@@ -145,15 +143,12 @@
   margin-bottom: 18px;
 }
 
-.contacts__left-wrapper {
-  margin-bottom: 19px;
+
+.contacts__shedule {
+  margin-bottom: 18px;
 }
 
 .contacts__right-wrapper {
-  h4 {
-    margin-bottom: 1px;
-  }
-
   a {
     font-size: 14px;
     line-height: 21px;
@@ -182,5 +177,13 @@
 
 .contacts__phone {
   margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__email {
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
 }
 

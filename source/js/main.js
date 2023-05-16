@@ -55,6 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         spaceBetween: 0,
         direction: 'horizontal',
+        initialSlide: -4,
         loop: true,
 
         navigation: {
